@@ -53,6 +53,8 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
+  const odds = arr.filter( num => num % 2);
+  return odds;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,6 +67,7 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
