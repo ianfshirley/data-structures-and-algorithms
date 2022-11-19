@@ -9,6 +9,7 @@ Write a function named returnTen, takes in a string and uses split and splice to
 
 function returnTen(str){
   // Solution code here...
+  return str.split('').splice(str.length - 10);
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -27,6 +28,14 @@ return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   // Solution code here...
+  let max = matrix[0][0];
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++) {
+      let currentNum = matrix[i][j];
+      max < currentNum ? max = currentNum : max;
+    }
+  }
+  return max;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,6 +54,21 @@ return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   // Solution code here...
+  // let matrixSum = 0;
+  // matrix.forEach(arr => {
+  //   let arrSum = arr.reduce((a,b) => {
+  //     return a+b;
+  //   }, 0);
+  //   matrixSum += arrSum;
+  // });
+  // return matrixSum;
+  let matrixSum = 0;
+  matrix.forEach(arr => {
+    arr.forEach(num => {
+      matrixSum += num;
+    });
+  });
+  return matrixSum;
 };
 
 
