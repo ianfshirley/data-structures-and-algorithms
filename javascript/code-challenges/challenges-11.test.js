@@ -18,7 +18,7 @@ Becomes:
 ]
 ------------------------------------------------------------------------------------------------ */
 
-function transformToLis(obj){
+function transformToLis(obj) {
   let result = Object.entries(obj).reduce((memo, o) => {
     let li = `<li>${o[0]}: ${o[1]}</li>`;
     return memo.concat(li);
@@ -40,7 +40,19 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
+  console.log('IAN input', input);
   // Solution code here...
+  let result = input.reduce((memo, arr) => {
+    return arr.reduce((acc, val) => {
+      if (val === target) {
+        acc++;
+      }
+      return acc;
+    }, memo);
+  }, 0);
+  console.log('ian result', result);
+  return result;
+  // console.log('result:', result);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -54,7 +66,11 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
-  // Solution code here...
+  return input.reduce((memo, arr) => {
+    return arr.reduce((acc, value) => {
+      return acc += value;
+    }, memo);
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -139,6 +155,22 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
+  let filtered = data.filter((obj) => {
+    if (obj.gender === 'female' || obj.gender === 'male') {
+      return true;
+    }
+    return false;
+  });
+
+  console.log('ian filt', filtered);
+
+  return filtered.reduce((memo, obj) => {
+    if (memo.length !== 0) {
+      return memo + ' and ' + obj.name;
+    } else {
+      return obj.name;
+    }
+  }, '');
   // Solution code here...
 };
 
@@ -151,7 +183,7 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 let findShortest = (data) => {
   // Solution code here...
   // return data.reduce((shortestSoFar, currentChar) =>  parseInt(shortestSoFar.height) > parseInt(currentChar.height) ? currentChar : shortestSoFar).name;
-  return data.sort((a,b) => a.height - b.height)[0].name;
+  return data.sort((a, b) => a.height - b.height)[0].name;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -167,8 +199,8 @@ Run your tests from the console: jest challenges-10.test.js
 
 describe('Testing challenge 1', () => {
   test('It should return a list of key value pairs inside of li tags', () => {
-    expect(transformToLis({name: 'bob', age: 32})[0]).toStrictEqual(`<li>name: bob</li>`);
-    expect(transformToLis({name: 'bob', age: 32})[1]).toStrictEqual(`<li>age: 32</li>`);
+    expect(transformToLis({ name: 'bob', age: 32 })[0]).toStrictEqual(`<li>name: bob</li>`);
+    expect(transformToLis({ name: 'bob', age: 32 })[1]).toStrictEqual(`<li>age: 32</li>`);
     expect(transformToLis({})).toStrictEqual([]);
   });
 });
