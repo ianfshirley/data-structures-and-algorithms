@@ -3,13 +3,23 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function named longestString that takes in an array of strings and returns the index position of the longest string. 
+Write a function named longestString that takes in an array of strings and returns the index position of the longest string.
 ------------------------------------------------------------------------------------------------ */
 
 const longestString = (arr) => {
 // Solution code here...
+  if (arr.length === 0) {
+    return -1;
+  }
+  let longest = arr[0].length;
+  let longestIdx = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > longest) {
+      longestIdx = i;
+    }
+  }
+  return longestIdx;
 };
-  
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -20,6 +30,7 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 
 const firstLetters = (arr) => {
   // Solution code here...
+  return arr.map((str) => str[0]).join('').split('');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,6 +43,8 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 
 const findHappiness = (arr) => {
   // Solution code here...
+  let smiley = ':)';
+  return arr.filter(str => str.includes(smiley));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,6 +57,7 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
+  return arr.map(num => num.replace(/\D/g, ''));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -56,6 +70,13 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
+  let odd = [];
+  for (let i = 0; i < str.length; i++) {
+    if (i % 2 !== 0) {
+      odd.push(str[i]);
+    }
+  }
+  return odd.join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,6 +87,8 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
+  let smiley = ':)';
+  return arr.every(str => str.includes(smiley));
 };
 
 /* ------------------------------------------------------------------------------------------------
