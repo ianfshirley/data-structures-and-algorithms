@@ -12,7 +12,8 @@ Write a function named screenForNames that takes in an array of strings and uses
 
 const screenForNames = (arr) => {
   // Solution code here...
-  let regex = /^[Mr.|Mrs.|Ms.|Dr.]+\s[a-zA-Z]/gm;
+  // let regex = /^[Mr.|Mrs.|Ms.|Dr.]+\s[a-zA-Z]/gm;
+  let regex = /^(Mr. |Mrs. |Ms. |Dr. )[a-zA-Z]/gm;
   return arr.filter(str => regex.test(str));
 };
 
@@ -26,6 +27,7 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 
 const toTitleCase = (arr) => {
   // Solution code here...
+  return arr.map(str => str.replace(str[0], str[0].toUpperCase()));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -101,6 +103,9 @@ let starWarsData = [{
 
 let biggerThanLuke = (arr) => {
   // Solution code here...
+  let LW = starWarsData[0].mass;
+  let bigBoys = arr.filter(char => parseInt(char.mass) > parseInt(LW));
+  return bigBoys.map(char => char.name).join(' - ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -119,6 +124,11 @@ This data could be sorted by name or price.
 
 const sortBy = (property, arr) => {
   // Solution code here...
+  if (property === 'name') {
+    return arr.sort((a, b) => a[property] < b[property] ? -1 : 1);
+  } else {
+    return arr.sort((a, b) => a[property] - b[property]);
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -135,6 +145,8 @@ https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
   // Solution code here...
+  let regex = /^https:\/{2}/g;
+  return regex.test(url);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -158,6 +170,23 @@ Here is a sample board:
 
 const detectTicTacToeWin = (board) => {
   // Solution code here...
+  let helper = (set) => {
+    return set.every(cell => cell !== '' && cell === set[0])
+      ? true : false;
+  };
+  //rows
+  if (helper(board[0])) return true;
+  if (helper(board[1])) return true;
+  if (helper(board[2])) return true;
+  //columns
+  if (helper([board[0][0], board[1][0], board [2][0]])) return true;
+  if (helper([board[0][1], board[1][1], board [2][1]])) return true;
+  if (helper([board[0][2], board[1][2], board [2][2]])) return true;
+  //diagonals
+  if (helper([board[0][0], board[1][1], board [2][2]])) return true;
+  if (helper([board[0][2], board[1][1], board [2][0]])) return true;
+  //if none of the above are true:
+  return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
