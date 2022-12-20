@@ -45,7 +45,7 @@ Each type of code challenge has slightly different instructions. Please refer to
 Code challenges should be completed within a folder named `code_challenges` under the `python` level
 
 - Daily Setup:
-  - Create a new folder under the `python` level, with the name of the code challenge
+  - Create a new folder under the `python/docs` level, with the name of the code challenge
     - Each code challenge assignment identifies the branch name to use, for example 'find-maximum-value'
     - For clarity, create your folder with the same name, ensuring that it's `snake_cased`
     - i.e. For a challenge named 'find_maximum_value', create the folder:`code_challenges/find_maximum_value`
@@ -74,3 +74,9 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 - **Run every possible test** - `pytest`
 - **Run filtered tests** - `pytest -k some_filter_text`
 - **Run in watch mode** - `ptw` or `pytest-watch`
+
+
+### Table of Contents
+
+- [Array Reverse](/docs/array_reverse/README.md)
+-
