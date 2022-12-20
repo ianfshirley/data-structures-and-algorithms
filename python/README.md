@@ -79,4 +79,4 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 ### Table of Contents
 
 - [Array Reverse](/docs/array_reverse/README.md)
-- 
+-
