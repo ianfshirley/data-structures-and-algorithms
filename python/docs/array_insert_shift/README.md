@@ -8,7 +8,7 @@ Write a second function that removes an element from the middle index and shifts
 elements in the array to fill the new gap.
 
 ## Whiteboard Process
-![Array-Insert-Shift Whiteboard](array_shift_insert.png)
+![Array-Insert-Shift Whiteboard](array_insert_shift.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
