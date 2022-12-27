@@ -80,3 +80,5 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 
 - [Array Reverse](/docs/array_reverse/README.md)
 - [Array Insert Shift](/docs/array_insert_shift/README.md)
+- [Array Binary Search](/docs/array_binary_search/README.md)
+- [Array Binary Search](/docs/array_binary_search/README.md)
