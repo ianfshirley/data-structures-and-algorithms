@@ -25,7 +25,7 @@ def test_even_length():
     assert str(actual) == str(expected)
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_a_shorter():
     list_a = LinkedList()
     for value in reversed([1, 2]):
