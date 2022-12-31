@@ -10,7 +10,9 @@ class Node:
 
 class Queue:
     """
-    Put docstring heree
+    Initiates a queue with Nodes to be added (enqueue) or removed (dequeue) following the FIFO / LILO principles. The
+    first node to be added will be the first one out. The last node added will be the last one out. Like queueing
+    for a movie.
     """
 
     def __init__(self):

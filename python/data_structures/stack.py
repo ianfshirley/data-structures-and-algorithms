@@ -9,7 +9,8 @@ class Node:
 
 class Stack:
     """
-    Put docstring here
+    Initiates a stack with Nodes to be added (push) and removed (pop) following the FILO / LIFO principles. The last
+    node added will be the first out, and the first node added will be the last out. Like stacking dinner plates.
     """
 
     def __init__(self):
