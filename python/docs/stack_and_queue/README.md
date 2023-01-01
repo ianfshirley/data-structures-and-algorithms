@@ -7,7 +7,7 @@ does not reference its previous Node.
   - each stack recognizes a self.top Node
   - each Node's 'next' references the stack "below" it (pointing from top towards the bottom)
 - Queues:
-  - follow the FIFO / LILO principles. The first Node added to the queue will be the first one removed. The last queue
+  - follow the FIFO / LILO principles. The first Node added to the queue will be the first one removed. The last Node
   added to the queue will be the last one removed.
   - each queue recognizes a self.front & a self.rear Node
   - each Node's 'next' references the stack "behind" it (pointing from front towards the rear)
