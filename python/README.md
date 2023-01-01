@@ -85,3 +85,4 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 - [Linked List Insertions](/docs/linked_list_insertions/README.md)
 - [Linked List - kth from end](/docs/linked_list_kth/README.md)
 - [Zip 2 Linked Lists](/docs/linked_list_zip/README.md)
+- [Stack and Queue](/docs/stack_and_queue/README.md)
