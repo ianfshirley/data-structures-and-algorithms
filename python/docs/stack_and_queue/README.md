@@ -58,3 +58,7 @@ does not reference its previous Node.
   - is_empty
     - Arguments: none
     - Returns: Boolean indicating whether or not the queue is empty
+
+## Code
+- [Stack](/data_structures/stack.py)
+- [Queue](/data_structures/queue.py)
