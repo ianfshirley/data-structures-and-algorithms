@@ -1,14 +1,25 @@
-from data_structures.linked_list import LinkedList
+from data_structures.linked_list import *
 
 
-def zip_lists(ll1, ll2):
-    new_ll = LinkedList()
-    while ll1.head or ll2.head:
-        if ll1.head:
-            new_ll.append(ll1.head.value)
-            ll1.head = ll1.head.next
-        if ll2.head:
-            new_ll.append(ll2.head.value)
-            ll2.head = ll2.head.next
-    return new_ll
+def zip_lists(a, b):
+    a_current = a.head
+    b_current = b.head
+    if a.head is None:
+        return b
+    if b.head is None:
+        return a
+    while a_current and b_current:
+        a_next = a_current.next
+        b_next = b_current.next
+        a_current.next = b_current
+        if a_next:
+            b_current.next = a_next
+        a_current = a_next
+        b_current = b_next
+    return a
+
+
+
+
+
 
