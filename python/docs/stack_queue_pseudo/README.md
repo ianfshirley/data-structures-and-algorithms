@@ -14,6 +14,11 @@ Extracts a value from the PseudoQueue, using a first-in, first-out approach.
 ## Whiteboard
 ![Pseudo Queue](stack_queue_pseudo.png)
 
+## Approach & Efficiency
+- Conditional statements containing while loops. While the stack is not empty, keep popping/pushing
+- space O(1) - only examining one node at a time
+- time O(n) - linear time increase with increasing stack lengths
+
 
 ## Solution
 
