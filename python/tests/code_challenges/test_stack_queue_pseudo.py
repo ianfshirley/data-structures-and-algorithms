@@ -6,7 +6,7 @@ def test_exists():
     assert PseudoQueue
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_enqueue_one():
     pq = PseudoQueue()
     pq.enqueue("apples")
@@ -15,7 +15,7 @@ def test_enqueue_one():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_enqueue_two():
     pq = PseudoQueue()
     pq.enqueue("apples")
@@ -30,7 +30,7 @@ def test_enqueue_two():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_enqueue_dequeue_enqueue_dequeue():
     pq = PseudoQueue()
     pq.enqueue("apples")
