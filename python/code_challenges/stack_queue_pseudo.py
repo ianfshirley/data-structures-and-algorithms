@@ -1,27 +1,22 @@
 from data_structures.stack import Stack
 
 
-class Node:
-    def __init__(self, value, next=None):
-        self.value = value
-        self.next = next
-
-
 class PseudoQueue:
-    """
-    create a pseudoqueue class to implement standard queue interface, internally using 2 stack instances to create and manage the queue
-    """
-
     def __init__(self):
-        # self.front = None
-        # self.rear = None
-        stack_1 = Stack()
-        stack_2 = Stack()
+        self.stack1 = Stack()
+        self.stack2 = Stack()
 
     def enqueue(self, value):
-        #peek to see if stack 1 has a self.top value
-        if stack_1.peek():
-            stack_1.pop()
+        if self.stack2.top is not None:
+            while self.stack2.top is not None:
+                item = self.stack2.pop()
+                self.stack1.push(item)
+        self.stack1.push(value)
 
     def dequeue(self):
-        pass
+        if self.stack1.top is not None:
+            while self.stack1.top is not None:
+                item = self.stack1.pop()
+                self.stack2.push(item)
+        result = self.stack2.pop()
+        return result
