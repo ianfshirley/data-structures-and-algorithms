@@ -17,3 +17,5 @@
 ## Solution
 [Link to Code](/code_challenges/stack_queue_brackets.py)
 
+## Thanks / Credit
+- Thanks to Dylan Cabral for the extra unit tests

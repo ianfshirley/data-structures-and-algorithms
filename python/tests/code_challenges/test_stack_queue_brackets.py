@@ -87,4 +87,4 @@ def test_extra_characters():
     actual = multi_bracket_validation("()[[Extra Characters]]")
     expected = True
     assert actual == expected
-    
+
