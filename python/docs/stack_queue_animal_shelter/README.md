@@ -15,7 +15,7 @@
 ![Stack_Queue_Animal_Shelter](stack_queue_animal_shelter.png)
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Big O: Time - O(n) linear increase based on length of queue. Space - O(1) constant, only evaluating one 'node' at a time.
 
 ## Solution
 - [Link to Code](/code_challenges/stack_queue_animal_shelter.py)
