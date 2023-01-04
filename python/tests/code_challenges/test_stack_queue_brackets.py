@@ -63,3 +63,28 @@ def test_mismatched():
     actual = multi_bracket_validation("[}")
     expected = False
     assert actual == expected
+
+
+def test_your_mom():
+    actual = multi_bracket_validation("[your mom}")
+    expected = False
+    assert actual == expected
+
+
+def test_my_mom_with_brackets():
+    actual = multi_bracket_validation("[my[ mom}")
+    expected = False
+    assert actual == expected
+
+
+def test_code_fellows():
+    actual = multi_bracket_validation("{}{Code}[Fellows](())")
+    expected = True
+    assert actual == expected
+
+
+def test_extra_characters():
+    actual = multi_bracket_validation("()[[Extra Characters]]")
+    expected = True
+    assert actual == expected
+    
