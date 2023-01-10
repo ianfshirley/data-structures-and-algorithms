@@ -88,3 +88,7 @@ class BinaryTree:
         # Base Case
         return nodes
 
+    def find_maximum_value(self):
+        if self.root is None:
+            return None
+        return max(self.pre_order())
