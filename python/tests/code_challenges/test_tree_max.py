@@ -2,7 +2,7 @@ import pytest
 from data_structures.binary_tree import BinaryTree, Node
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_max_val():
     tree = BinaryTree()
     tree.root = Node(10)
@@ -13,3 +13,14 @@ def test_max_val():
     expected = 30
 
     assert actual == expected
+
+def test_empty():
+    tree = BinaryTree()
+    tree.root = None
+
+    actual = tree.find_maximum_value()
+    expected = None
+
+    assert actual == expected
+
+    
