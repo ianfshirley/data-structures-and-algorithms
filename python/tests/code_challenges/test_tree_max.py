@@ -13,3 +13,14 @@ def test_max_val():
     expected = 30
 
     assert actual == expected
+
+def test_empty():
+    tree = BinaryTree()
+    tree.root = None
+
+    actual = tree.find_maximum_value()
+    expected = None
+
+    assert actual == expected
+
+    
