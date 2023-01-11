@@ -6,9 +6,7 @@ class Node:
 
 
 class BinaryTree:
-    """
-    Put docstring here
-    """
+
     def __init__(self):
         self.root = None
 
