@@ -29,6 +29,8 @@ class Queue:
         # if empty, front & rear are both equal to the new node
         self.rear = self.front = Node(value)
 
+
+
     def dequeue(self):
         if self.front is None:
             raise InvalidOperationError("Method not allowed on empty collection")

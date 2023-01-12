@@ -91,4 +91,4 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 - [Stack-Queue-Brackets](/docs/stack_queue_brackets/README.md)
 - [Binary Tree / Binary Search Tree](/docs/trees/README.md)
 - [Breadth First Tree Traversal](/docs/tree_breadth_first/README.md)
-
+- [Tree FizzBuzz](/docs/tree_fizz_buzz/README.md)
