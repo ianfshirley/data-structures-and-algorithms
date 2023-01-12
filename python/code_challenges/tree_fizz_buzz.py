@@ -8,7 +8,7 @@ def fizz_buzz_tree(tree):
     cloned = tree.clone()
 
     def fizz_buzz(node):
-        if node.value % 5 == 0 and node.value % 3 == 0:
+        if node.value % 3 == 0 and node.value % 5 == 0:
             node.value = "FizzBuzz"
         elif node.value % 3 == 0:
             node.value = "Fizz"
@@ -19,8 +19,6 @@ def fizz_buzz_tree(tree):
 
         for x in node.children:
             fizz_buzz(x)
-
-        return node
 
     fizz_buzz(cloned.root)
     return cloned
