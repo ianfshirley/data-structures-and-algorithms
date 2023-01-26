@@ -93,3 +93,4 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 - [Breadth First Tree Traversal](/docs/tree_breadth_first/README.md)
 - [Tree FizzBuzz](/docs/tree_fizz_buzz/README.md)
 - [Insertion Sort](sorting/insertion/README.md)
+- [Movies - Comparison Sort](sorting/movies/README.md)
