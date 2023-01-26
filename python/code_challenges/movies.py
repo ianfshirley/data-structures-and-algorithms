@@ -60,9 +60,8 @@ movies = [
 
 
 def sort_by_year(lst):
-  pass
+  return [movie['title'] for movie in sorted(lst, key=lambda x: x['year'])]
 
 
 def sort_by_title(lst):
-  titles = [movie['title'] for movie in sorted(lst, key=lambda x: (re.sub(r'^(The |A |An )', '', x['title'])))]    
-  return titles
+  return [movie['title'] for movie in sorted(lst, key=lambda x: (re.sub(r'^(The |A |An )', '', x['title'])))]
