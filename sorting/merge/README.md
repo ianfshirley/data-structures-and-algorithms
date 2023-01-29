@@ -12,5 +12,7 @@ In simple terms, we can say that the process of merge sort is to divide the arra
 - Big O Space: O(n)
 
 ## Link to Code
-[merge_sort.py]()
+[merge_sort.py](python/code_challenges/merge_sort.py)
 
+### Link to Test File
+[test_merge_sort.py](python/tests/code_challenges/test_merge_sort.py)
