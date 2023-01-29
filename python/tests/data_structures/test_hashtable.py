@@ -16,7 +16,6 @@ from data_structures.hashtable import Hashtable
 
 # Successfully retrieve a value from a bucket within the hashtable that has a collision
 
-# Successfully hash a key to an in-range value
 
 
 
@@ -34,7 +33,7 @@ def test_hash():
 
 # Setting a key/value to your hashtable results in the value being in the data structure
 # Retrieving based on a key returns the value stored
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_get_apple():
     hashtable = Hashtable()
     hashtable.set("apple", "Used for apple sauce")
