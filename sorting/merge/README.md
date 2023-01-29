@@ -13,6 +13,4 @@ In simple terms, we can say that the process of merge sort is to divide the arra
 
 ## Link to Code
 [merge_sort.py]()
-```
 
-```
