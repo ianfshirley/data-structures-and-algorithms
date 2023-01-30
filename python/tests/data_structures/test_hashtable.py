@@ -51,6 +51,7 @@ def test_has_none():
 
 
 # Successfully returns a list of all unique keys that exist in the hashtable
+# Successfully handle a collision within the hashtable
 # @pytest.mark.skip("TODO")
 def test_keys():
     hashtable = Hashtable()
@@ -62,21 +63,15 @@ def test_keys():
     assert actual == expected
 
 
-# Successfully handle a collision within the hashtable
-# @pytest.mark.skip("TODO")
-# def test_collision():
-#     hashtable = Hashtable(10)
-#     hashtable.set("god", "god")
-#     hashtable.set("dog", "dog")
-#     index = hashtable._hash("god")
-
-    # expected = hashtable._hash("dog")
-    # assert actual == expected
-
 # Successfully retrieve a value from a bucket within the hashtable that has a collision
 @pytest.mark.skip("TODO")
 def test_collision_retrieve_value():
-    pass
+    hashtable = Hashtable()
+    hashtable.set("silent", True)
+    hashtable.set("listen", "to me")
+    actual = hashtable.get("listen")
+    expected = "to me"
+    assert actual == expected
 
 
 @pytest.mark.skip("TODO")
