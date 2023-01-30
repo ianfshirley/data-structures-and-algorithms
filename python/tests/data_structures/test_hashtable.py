@@ -2,28 +2,13 @@ import pytest
 from data_structures.hashtable import Hashtable
 
 
-# Write tests to prove the following functionality:
-
-
-
-
-
-# Successfully returns null for a key that does not exist in the hashtable
-
-# Successfully returns a list of all unique keys that exist in the hashtable
-
-# Successfully handle a collision within the hashtable
-
-# Successfully retrieve a value from a bucket within the hashtable that has a collision
-
-
-
-
+# @pytest.mark.skip("TODO")
 def test_exists():
     assert Hashtable
 
 
 # Successfully hash a key to an in-range value
+# @pytest.mark.skip("TODO")
 def test_hash():
     hashtable = Hashtable()
     actual = hashtable._hash("squid")
@@ -40,6 +25,62 @@ def test_get_apple():
     actual = hashtable.get("apple")
     expected = "Used for apple sauce"
     assert actual == expected
+
+
+# Successfully returns an error message for a key that does not exist in the hashtable
+# @pytest.mark.skip("TODO")
+# def test_get_none():
+#     hashtable = Hashtable()
+#     hashtable.set("ahmad", 30)
+#     hashtable.set("silent", True)
+#     hashtable.set("listen", "to me")
+#     actual = hashtable.get("ian")
+#     expected = KeyError()
+#     assert actual == expected
+
+# AttributeError: 'NoneType' object has no attribute 'head'
+
+
+# @pytest.mark.skip("TODO")
+def test_has():
+    hashtable = Hashtable()
+    hashtable.set("ahmad", 30)
+    hashtable.set("silent", True)
+    hashtable.set("listen", "to me")
+    actual = hashtable.has("listen")
+    expected = True
+    assert actual == expected
+
+
+
+
+# Successfully returns a list of all unique keys that exist in the hashtable
+@pytest.mark.skip("TODO")
+def test_keys():
+    hashtable = Hashtable()
+    hashtable.set("ahmad", 30)
+    hashtable.set("silent", True)
+    hashtable.set("listen", "to me")
+    actual = hashtable.keys()
+    expected = ["ahmad", "listen", "silent"]
+    assert actual == expected
+
+
+# Successfully handle a collision within the hashtable
+# @pytest.mark.skip("TODO")
+# def test_collision():
+#     hashtable = Hashtable(10)
+#     hashtable.set("god", "god")
+#     hashtable.set("dog", "dog")
+#     index = hashtable._hash("god")
+
+    # expected = hashtable._hash("dog")
+    # assert actual == expected
+
+# Successfully retrieve a value from a bucket within the hashtable that has a collision
+@pytest.mark.skip("TODO")
+def test_collision_retrieve_value():
+    pass
 
 
 @pytest.mark.skip("TODO")

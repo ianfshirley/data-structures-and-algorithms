@@ -48,9 +48,16 @@ class Hashtable:
         raise KeyError(f"Key not found: {key}")
 
 
-    def has(self):
-        # method body here
-        pass
+    def has(self, key):
+        hashed_key = self._hash(key)
+        bucket = self._buckets[hashed_key]
+        current = bucket.head
+        while current:
+            if current.value[0] == key:
+                return True
+            current = current.next
+        return False
+
 
 
     def keys(self):
