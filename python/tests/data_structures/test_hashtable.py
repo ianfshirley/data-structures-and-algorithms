@@ -27,20 +27,6 @@ def test_get_apple():
     assert actual == expected
 
 
-# Successfully returns an error message for a key that does not exist in the hashtable
-# @pytest.mark.skip("TODO")
-# def test_get_none():
-#     hashtable = Hashtable()
-#     hashtable.set("ahmad", 30)
-#     hashtable.set("silent", True)
-#     hashtable.set("listen", "to me")
-#     actual = hashtable.get("ian")
-#     expected = KeyError()
-#     assert actual == expected
-
-# AttributeError: 'NoneType' object has no attribute 'head'
-
-
 # @pytest.mark.skip("TODO")
 def test_has():
     hashtable = Hashtable()
@@ -52,6 +38,16 @@ def test_has():
     assert actual == expected
 
 
+# Successfully returns an error message for a key that does not exist in the hashtable
+# @pytest.mark.skip("TODO")
+def test_has_none():
+    hashtable = Hashtable()
+    hashtable.set("ahmad", 30)
+    hashtable.set("silent", True)
+    hashtable.set("listen", "to me")
+    actual = hashtable.has("ian")
+    expected = False
+    assert actual == expected
 
 
 # Successfully returns a list of all unique keys that exist in the hashtable

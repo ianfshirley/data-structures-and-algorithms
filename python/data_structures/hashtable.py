@@ -51,15 +51,19 @@ class Hashtable:
     def has(self, key):
         hashed_key = self._hash(key)
         bucket = self._buckets[hashed_key]
+        if not bucket:
+            return False
         current = bucket.head
         while current:
             if current.value[0] == key:
                 return True
             current = current.next
-        return False
 
 
 
     def keys(self):
-        # method body here
-        pass
+        keys = []
+        for bucket in self._buckets:
+            for kv in bucket:
+                keys.append(kv[0])
+        return keys
