@@ -51,7 +51,7 @@ def test_has_none():
 
 
 # Successfully returns a list of all unique keys that exist in the hashtable
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_keys():
     hashtable = Hashtable()
     hashtable.set("ahmad", 30)
