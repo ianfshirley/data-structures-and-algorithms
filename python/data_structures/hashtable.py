@@ -62,8 +62,17 @@ class Hashtable:
 
 
     def keys(self):
+        buckets = self._buckets
+        filled_buckets = []
         keys = []
-        for bucket in self._buckets:
-            for kv in bucket:
-                keys.append(kv[0])
+        for x in buckets:
+            if x is not None:
+                filled_buckets.append(x)
+
+        for y in filled_buckets:
+            current = y.head
+            while current:
+                k = current.value
+                keys.append(k[0])
+                current = current.next
         return keys

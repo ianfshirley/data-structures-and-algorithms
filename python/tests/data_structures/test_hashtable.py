@@ -58,7 +58,7 @@ def test_keys():
     hashtable.set("silent", True)
     hashtable.set("listen", "to me")
     actual = hashtable.keys()
-    expected = ["ahmad", "listen", "silent"]
+    expected = ["listen", "silent", "ahmad"]
     assert actual == expected
 
 
