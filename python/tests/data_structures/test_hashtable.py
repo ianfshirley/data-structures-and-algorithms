@@ -64,7 +64,7 @@ def test_keys():
 
 
 # Successfully retrieve a value from a bucket within the hashtable that has a collision
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_collision_retrieve_value():
     hashtable = Hashtable()
     hashtable.set("silent", True)
