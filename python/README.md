@@ -95,3 +95,4 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 - [Insertion Sort](sorting/insertion/README.md)
 - [Movies - Comparison Sort](sorting/movies/README.md)
 - [Merge Sort](sorting/merge/README.md)
+- [Hashtable](python/docs/hashtable/README.md)

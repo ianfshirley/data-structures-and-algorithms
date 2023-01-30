@@ -2,6 +2,7 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
+
     def insert(self, value):
         """
         adds a new node with a value to the head of the list - with an O(1) time performance
