@@ -2,7 +2,7 @@ import pytest
 from code_challenges.hashtable_repeated_word import first_repeated_word
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_blank():
     actual = first_repeated_word("")
     expected = None
