@@ -96,3 +96,4 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 - [Movies - Comparison Sort](sorting/movies/README.md)
 - [Merge Sort](sorting/merge/README.md)
 - [Hashtable](python/docs/hashtable/README.md)
+- [Hashtable - First Repeated Word](python/docs/hashtable_repeated_word/README.md)
