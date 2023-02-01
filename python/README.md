@@ -97,3 +97,4 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 - [Merge Sort](sorting/merge/README.md)
 - [Hashtable](python/docs/hashtable/README.md)
 - [Hashtable - First Repeated Word](python/docs/hashtable_repeated_word/README.md)
+- [Tree Intersection](python/docs/tree_intersection/README.md)
